@@ -4,14 +4,10 @@ import com.xuan.dao.UserDao;
 import com.xuan.dao.UserDaoImpl;
 import com.xuan.dao.UserDaoMySqlImpl;
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl2 implements UserService{
 
-    private UserDao userDao;
-    //利用set注入
-    public void setUserDao(UserDao userDao){
-        this.userDao=userDao;
-    }
-
+    private  UserDao userDao=new UserDaoMySqlImpl();
+    @Override
     public void getUser() {
         userDao.getUser();
     }
