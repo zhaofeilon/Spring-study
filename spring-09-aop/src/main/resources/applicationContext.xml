@@ -31,4 +31,9 @@
             <aop:after method="after" pointcut-ref="point"/>
          </aop:aspect>
     </aop:config>
+<!--    方式三-->
+    <bean id="annotationPointCut" class="com.xuan.diy.AnnotationPointCut"/>
+<!--    开启注解支持-->
+    <aop:aspectj-autoproxy/>
+
 </beans>
